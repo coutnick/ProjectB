@@ -20,5 +20,9 @@ This project implements a basic structure for an AI driven crypto trading bot as
    ```bash
    python run_bot.py
    ```
+4. Launch the API server with FastAPI and Uvicorn:
+   ```bash
+   uvicorn server:app --reload
+   ```
 
 The bot is minimal and intended for educational use. Extend modules under `src/` to implement full functionality according to the design specification.

@@ -31,7 +31,7 @@ def append_ticker(df: pd.DataFrame, ticker: dict) -> pd.DataFrame:
                       'volume': ticker.get('baseVolume', 0)}, ignore_index=True)
 
 
-async def main():
+async def run_bot():
     cfg = load_config()
 
     exchange = ccxt.phemex({'apiKey': cfg.exchange.api_key, 'secret': cfg.exchange.api_secret})
@@ -59,6 +59,10 @@ async def main():
         await asyncio.sleep(1)
 
     await executor.close()
+
+
+async def main():
+    await run_bot()
 
 
 if __name__ == '__main__':
