@@ -12,7 +12,8 @@ This project implements a basic structure for an AI driven crypto trading bot as
 
 ## Setup
 1. Copy `.env.example` to `.env` and fill in API keys.
-2. Install requirements:
+2. Install requirements (note that `langchain-community` has been added to
+   provide chat model integrations):
    ```bash
    pip install -r requirements.txt
    ```
